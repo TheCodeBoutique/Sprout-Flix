@@ -42,14 +42,12 @@ SproutFlix.SproutScrolling = SC.ListView.extend({
     var row = Math.floor(contentIndex / itemsPerRow);
     var col = contentIndex - (itemsPerRow*row);
 
-		console.log('this is a cal for width');
-
 
     return {
       left: col * columnWidth,
       top: row * rowHeight,
       height: rowHeight,
-      width: columnWidth,
+      width: columnWidth
     };
   },
 
@@ -85,21 +83,15 @@ computeLayout: function() {
 
     // use this cached layout hash to avoid allocing memory...
     var ret = this._cachedLayoutHash ;
-		console.log('this is cachedLayoutHash');
-		console.log(ret);
     if (!ret) ret = this._cachedLayoutHash = {};
 
 
 
     // set minHeight
     ret.minHeight = rows * rowHeight ;
-		console.log('return min height');
-		console.log(ret.minHeight);
     this.calculatedHeight = ret.minHeight;
-		console.log('return calculatedHeight');
-		console.log(this.calculatedHeight)
     return ret;
-  },
+  }
 
 
 }) ;

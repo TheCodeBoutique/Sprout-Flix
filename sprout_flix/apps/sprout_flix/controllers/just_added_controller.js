@@ -39,8 +39,6 @@ SproutFlix.justAddedSelectionController = SC.ObjectController.create({
 
   contentDidChange:function() {
 
-    console.log('this is the content that you selected...[%@]'.fmt(this.get('content')))
-
   }.observes('content')
 
 });
