@@ -7,6 +7,7 @@ sc_require('views/JustAdded/just_added_custom_cell');
 sc_require('views/JustAdded/just_added_grid_view');
 sc_require('views/JustAdded/sprout_horizontal');
 sc_require('views/sprout_scrolling');
+sc_require('views/RottenTomatoes/top_movies');
 // This page describes the main user interface for your application.
 SproutFlix.mainPage = SC.Page.design({
 
@@ -73,22 +74,10 @@ SproutFlix.mainPage = SC.Page.design({
 
       topLeftView: SC.View.design({
         layout: { top: 75, bottom: 32, width: 200 },
-        childViews: 'sign_up_view'.w(),
+        childViews: 'topTenMovies'.w(),
 
-        sign_up_view: SC.ScrollView.design({
-          hasHorizontalScroller: NO,
-          layout: { top: 0, bottom: 0, left: 0, right:0},
-
-          contentView: SC.ListView.design({
-//             	    	contentValueKey: "",
-//             		    contentBinding: "",
-//             		    selectionBinding: "",
-//             	      rowHeight: 100,
-//             		    rowSpacing: 2
-          })
-        })
+        topTenMovies:SproutFlix.TopMovies.create({})
       }),
-
 
       topLeftMaxThickness: 250,
 

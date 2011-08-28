@@ -151,7 +151,8 @@ SproutFlix.MainDataSource = SC.DataSource.extend({
     if (SC.ok(response)) {
       var json = response.get('body');
       var cookedTomatoes = this.processJson(json, response, store, query);
-
+      var data = cookedTomatoes.firstObject().movies;
+      SproutFlix.tomatoesMoviesController.set('content', data);
       /**
        * when process get done load new records into are store
        *

@@ -10,6 +10,10 @@
 
   @extends SC.Object
 */
+SproutFlix.tomatoesMovieSelectionController = SC.ArrayController.create({
+
+      //contentBinding:'SproutFlix.tomatoesMoviesController.selection'
+}) ;
 SproutFlix.tomatoesMoviesController = SC.ArrayController.create({
 
 }) ;
@@ -17,4 +21,6 @@ SproutFlix.tomatoesMoviesController = SC.ArrayController.create({
 
 SproutFlix.tomatoesController = SC.ObjectController.create({
 
-}) ;
+
+
+});

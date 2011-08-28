@@ -21,6 +21,8 @@ SproutFlix.LoadingDataState = SC.State.extend({
       var tomatoesData = SproutFlix.store.find(SproutFlix.RottenTomatoesQuery);
       SproutFlix.tomatoesController.set('content', tomatoesData);
 
+
+
       //after data is load move to trailer state
       this.gotoState('MainTrailerState');
     },

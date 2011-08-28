@@ -7,6 +7,7 @@
     text-shadow: 1px 1px 3px #888;
 }
 
+
 .sc-list-item-view img.icon {
     max-width: 55px;
     max-height: 55px;
@@ -247,5 +248,26 @@
 
 .back-button {
     z-index: 1000;
+}
+
+.tomatoes-top-ten {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    color: #949192;
+
+}
+.tomatoes-75 {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    color: #949192;
+
+}
+.tomatoes-four-tomatoes {
+    background-position: 0px,4px;
+    background-image: sc_static('resources/images/tomatoes.png');
 }
 
