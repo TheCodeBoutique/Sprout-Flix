@@ -138,6 +138,7 @@
     border-right-style: inset;
 }
 
+
 .trail {
     border-radius: 20px;
 
@@ -254,6 +255,15 @@
     font-size: 14px !important;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis !important;
+    color: #949192;
+
+}
+.tomatoes-top-ten-critics {
+    font-size: 14px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
     text-overflow: ellipsis !important;
     color: #949192;
 

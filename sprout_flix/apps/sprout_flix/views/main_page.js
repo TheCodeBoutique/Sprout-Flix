@@ -17,6 +17,8 @@ SproutFlix.mainPage = SC.Page.design({
   mainPane: SC.MainPane.design({
     childViews: 'contentSplit topBar bottomBar'.w(),
 
+
+
     topBar:SC.ToolbarView.design({
       layout:{top:0,height:60},
       anchorLocation:SC.ANCHOR_TOP,
@@ -76,8 +78,10 @@ SproutFlix.mainPage = SC.Page.design({
         layout: { top: 75, bottom: 32, width: 200 },
         childViews: 'topTenMovies'.w(),
 
-        topTenMovies:SproutFlix.TopMovies.create({})
+        topTenMovies:SproutFlix.TopMovies.create({}),
+
       }),
+
 
       topLeftMaxThickness: 250,
 
