@@ -1,13 +1,7 @@
-sc_require('views/RottenTomatoes/tomatoe_custom_row');
-sc_require('views/RottenTomatoes/tomatoe_list_view');
-
-sc_require('views/RottenTomatoes/ComingSoon/soon_custom_row');
-sc_require('views/RottenTomatoes/ComingSoon/soon_list_view');
-
 sc_require('views/RottenTomatoes/DVD/dvd_custom_row');
 sc_require('views/RottenTomatoes/DVD/dvd_list_view');
 
-SproutFlix.TopMovies = SC.View.extend({
+SproutFlix.SoonMovies = SC.View.extend({
   layout: { top:0, height:350, left: 0, right:0},
 
   childViews:'topTen topBar subBar bottomBar'.w(),
@@ -16,19 +10,17 @@ SproutFlix.TopMovies = SC.View.extend({
     layout: { top: 0, left: 0, right: 0, height: 30 },
     childViews:'title'.w(),
     title:SC.LabelView.design({
-      layout: { centerY: 0, height: 24, left:0,right:0  },
+      layout: { centerY: 0, height: 24, centerX: 0, width: 60  },
       controlSize: SC.LARGE_CONTROL_SIZE,
-      needsEllipsis:YES,
-      textAlign:SC.ALIGN_CENTER,
       fontWeight: SC.BOLD_WEIGHT,
       escapeHTML: NO,
-      valueBinding:'SproutFlix.tomatoesMoviesController.selectionTitle'
+      value:'Movies'.loc()
     })
   }),
 
   subBar:SC.ToolbarView.design({
     layout: { top: 30, left: 0, right: 0, height: 30 },
-    childViews:'topTen newDVD comingSoon'.w(),
+    childViews:'topTen newDVD commingSoon'.w(),
 
     topTen:SC.ButtonView.design({
       layout: {top:3,left: 10, width: 60, height: 25 },
@@ -45,7 +37,7 @@ SproutFlix.TopMovies = SC.View.extend({
 
     }),
 
-    comingSoon:SC.ButtonView.design({
+    commingSoon:SC.ButtonView.design({
       layout: {top:3,left: 170, width: 60, height: 25 },
       title:'Soon'.loc(),
       target:'SproutFlix.statechart',
@@ -70,39 +62,14 @@ SproutFlix.TopMovies = SC.View.extend({
   topTen:SC.View.design({
     layout: { top: 60, bottom:20, left: 0, right:0},
     childViews:'topDVD commingSoon ten'.w(),
-
-    topDVD:SC.ScrollView.design({
-      hasHorizontalScroller: NO,
-      layout: { top: 0, height:350, left: -250, width:250},
-
-      contentView:SproutFlix.DvdListView.design({
-        contentValueKey: "title",
-        contentBinding: "SproutFlix.newDvdController.arrangedObjects",
-        selectionBinding: "SproutFlix.newDvdController.selection",
-        delegate: SproutFlix.tomatoesMoviesController,
-        actOnSelect:YES,
-        target:SproutFlix.statechart,
-        rowSpacing: 2,
-        exampleView:SproutFlix.DvdCustomRow
-      })
-
+    topDVD:SC.View.design({
+       layout: { top: 0, height:350, left: -250, width:250},
+      backgroundColor:'black'
     }),
 
-    commingSoon:SC.ScrollView.design({
-      hasHorizontalScroller: NO,
-      layout: { top: 0, height:350, left: -250, width:250},
-
-      contentView:SproutFlix.SoonListView.design({
-        contentValueKey: "title",
-        contentBinding: "SproutFlix.comingSoonController.arrangedObjects",
-        selectionBinding: "SproutFlix.comingSoonController.selection",
-        delegate: SproutFlix.tomatoesMoviesController,
-        actOnSelect:YES,
-        target:SproutFlix.statechart,
-        rowSpacing: 2,
-        exampleView:SproutFlix.SoonCustomRow
-      })
-
+    commingSoon:SC.View.design({
+       layout: { top: 0, height:350, left: -250, width:250},
+      backgroundColor:'pink'
     }),
 
 

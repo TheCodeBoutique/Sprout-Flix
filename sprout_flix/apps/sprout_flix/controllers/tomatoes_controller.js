@@ -22,6 +22,7 @@ SproutFlix.tomatoesMoviesController = SC.ArrayController.create(SC.CollectionRow
 
   customRowHeightIndexes: SC.IndexSet.create(),
   rowHeight: 100,
+  selectionTitle:'Movies',
 
   selectionDidChange: function() {
 

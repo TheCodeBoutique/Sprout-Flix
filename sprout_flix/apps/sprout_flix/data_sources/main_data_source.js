@@ -134,9 +134,10 @@ SproutFlix.MainDataSource = SC.DataSource.extend({
   fetchTomatoes:function(store, query) {
 
     var key = 'wwmzjrbf86849kha4rtwg6an';
-    var pre = 'apikey=';
+    var api = 'apikey=';
     var params = '&page_limit=10';
-    var url = pre + key + params;
+    var end = api + key + params;
+    var url = 'movies/in_theaters.json?' +end;
 
 
     SC.Request.getUrl(url)

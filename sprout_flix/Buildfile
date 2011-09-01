@@ -15,4 +15,7 @@ config :all, :required => :sproutcore
 proxy '/just_added', :to =>'trailers.apple.com' , :url => '/trailers/home/feeds/just_added.json'
 proxy '/most_pop', :to =>'trailers.apple.com' , :url => '/trailers/home/feeds/most_pop.json'
 
-proxy '/', :to =>'api.rottentomatoes.com' , :url => '/api/public/v1.0/lists/movies/in_theaters.json?'
+proxy '/', :to =>'api.rottentomatoes.com' , :url => '/api/public/v1.0/lists/'
+#proxy '/', :to =>'api.rottentomatoes.com' , :url => '/api/public/v1.0/lists/dvds.json?'
+
+                                                                                   #dvds/new_releases.json?

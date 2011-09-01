@@ -632,6 +632,7 @@ SC.Request.manager = SC.Object.create(
 
     @returns {Object} receiver
   */
+
   fireRequestIfNeeded: function() {
     var pending = this.get('pending'),
         inflight = this.get('inflight'),

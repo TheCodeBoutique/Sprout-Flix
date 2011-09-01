@@ -60,13 +60,19 @@ SproutFlix.MainTrailerState = SC.State.extend({
 
       }
     },
+    test:function(response){
+       debugger;
+    } ,
     doShowTopTen:function(view) {
+
+
       var ten = SproutFlix.getPath('mainPage.mainPane.contentSplit.topLeftView.topTenMovies.topTen.ten');
       var dvd = SproutFlix.getPath('mainPage.mainPane.contentSplit.topLeftView.topTenMovies.topTen.topDVD');
       var soon = SproutFlix.getPath('mainPage.mainPane.contentSplit.topLeftView.topTenMovies.topTen.commingSoon');
       var selection = view.title;
 
       if (selection === 'DVD') {
+        SproutFlix.tomatoesMoviesController.set('selectionTitle','New DVD');
         if (ten.layout.left === 0) {
           ten.animate('left', 250, {duration:.5, timing:'ease-in-out'});
         } else if (soon.layout.left === 0) {
@@ -80,7 +86,7 @@ SproutFlix.MainTrailerState = SC.State.extend({
           ten.adjust('left', -250);
         }, 600)
       } else if (selection === 'Soon') {
-
+         SproutFlix.tomatoesMoviesController.set('selectionTitle','Coming Soon');
         if (ten.layout.left === 0) {
           ten.animate('left', 250, {duration:.5, timing:'ease-in-out'});
         } else if (dvd.layout.left === 0) {
@@ -94,7 +100,7 @@ SproutFlix.MainTrailerState = SC.State.extend({
           ten.adjust('left', -250);
         }, 600)
       } else if (selection === 'Top') {
-
+           SproutFlix.tomatoesMoviesController.set('selectionTitle','Top Movies');
         if (soon.layout.left === 0) {
           soon.animate('left', 250, {duration:.5, timing:'ease-in-out'});
         } else if (dvd.layout.left === 0) {

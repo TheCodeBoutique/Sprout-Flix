@@ -21,11 +21,47 @@ SproutFlix.LoadingDataState = SC.State.extend({
       var tomatoesData = SproutFlix.store.find(SproutFlix.RottenTomatoesQuery);
       SproutFlix.tomatoesController.set('content', tomatoesData);
 
+      this.loadSoonUrls();
+      this.loadDvdUrls();
 
 
       //after data is load move to trailer state
       this.gotoState('MainTrailerState');
     },
+    loadSoonUrls:function() {
+      var key = 'wwmzjrbf86849kha4rtwg6an';
+      var api = 'apikey=';
+      var params = '&page_limit=10';
+      var end = api + key + params;
+      var soon = 'movies/upcoming.json?' + end;
+
+      SC.Request.getUrl(soon)
+          .notify(this, 'soonDidComplete')
+          .json().send();
+
+    },
+    loadDvdUrls:function() {
+      var key = 'wwmzjrbf86849kha4rtwg6an';
+      var api = 'apikey=';
+      var params = '&page_limit=10';
+      var end = api + key + params;
+      var dvd = 'dvds/new_releases.json?' + end;
+
+       SC.Request.getUrl(dvd)
+          .notify(this, 'dvdDidComplete')
+          .json().send();
+
+    },
+    soonDidComplete:function(response) {
+      var json = response.get('body');
+      var content = json.movies;
+      SproutFlix.comingSoonController.set('content',content);
+  },
+    dvdDidComplete:function(response) {
+      var json = response.get('body');
+      var content = json.movies;
+      SproutFlix.newDvdController.set('content',content);
+  },
 
     exitState:function() {
     }
