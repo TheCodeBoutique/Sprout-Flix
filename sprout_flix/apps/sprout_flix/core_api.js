@@ -151,14 +151,14 @@ SC.mixin(SproutFlix, {
     //need to had half tomatoes
     var rating = data.ratings;
     var score = rating.critics_score;
-    if(score > 75){
+    if (score > 75) {
       return sc_static('resources/images/4Stars.png');
-    } else if(score > 50 && score < 75) {
-       return sc_static('resources/images/3Stars.png');
-    } else if(score > 35 && score < 50) {
-       return sc_static('resources/images/2Stars.png');
+    } else if (score > 50 && score < 75) {
+      return sc_static('resources/images/3Stars.png');
+    } else if (score > 35 && score < 50) {
+      return sc_static('resources/images/2Stars.png');
     } else {
-       return sc_static('resources/images/1Stars.png');
+      return sc_static('resources/images/1Stars.png');
     }
   },
 
@@ -182,6 +182,74 @@ SC.mixin(SproutFlix, {
     pane.invokeLater(function() {
       pane.set('opacity', 1);
     }, 1000)
+
+  } ,
+  /**
+   * HTML 5 Geo location API
+   */
+  gettingGeoLocation:function() {
+
+    var image = document.createElement("img");
+
+
+    navigator.geolocation.getCurrentPosition(function(pos) {
+      var latitude = pos.coords.latitude;
+      var longitude = pos.coords.longitude;
+      var accuracy = pos.coords.accuracy;
+      debugger;
+//      var url = "http://maps.google.com/maps/api/staticmap" + "?center=" + lat + "," + long + "&size=350x350&sensor=true";
+//
+//      var zoomLevel = 80;
+//      if(accuracy > 80)
+//        zoomLevel -= Math.round(Math.log(accuracy/50)/Math.LN2);
+//      url += "&zoom" + zoomLevel;
+//      image.src = url;
+//
+//      SproutFlix.justAddedController.set('mapView',url);
+//
+//
+//      debugger;
+      var hash = {
+        lat:latitude,
+        longit:longitude,
+        acc:accuracy
+      };
+      //send it to google maps...
+      SproutFlix.mapThisGoogle(latitude, longitude);
+      return hash;
+
+    });
+
+  },
+  mapThisGoogle:function(latitude, longitude) {
+    debugger;
+    var mapcanvas = document.createElement('div');
+    mapcanvas.id = 'mapcanvas';
+    mapcanvas.style.height = '400px';
+    mapcanvas.style.width = '560px';
+
+    var latlng = new google.maps.LatLng(latitude, longitude);
+
+    var myOptions = {
+      zoom: 15,
+      center: latlng,
+      mapTypeControl: false,
+      navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    debugger;
+    var map = new google.maps.Map(document.getElementById("kyle"), myOptions);
+
+    debugger;
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      title:"You are here!"
+    });
+
+    debugger;
+
 
   }
 });

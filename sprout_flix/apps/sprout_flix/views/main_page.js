@@ -8,6 +8,7 @@ sc_require('views/JustAdded/just_added_grid_view');
 sc_require('views/JustAdded/sprout_horizontal');
 sc_require('views/sprout_scrolling');
 sc_require('views/RottenTomatoes/top_movies');
+sc_require('views/Maps/location_map');
 // This page describes the main user interface for your application.
 SproutFlix.mainPage = SC.Page.design({
 
@@ -76,9 +77,11 @@ SproutFlix.mainPage = SC.Page.design({
 
       topLeftView: SC.View.design({
         layout: { top: 75, bottom: 32, width: 200 },
-        childViews: 'topTenMovies'.w(),
+        childViews: 'topTenMovies currentLocation'.w(),
 
         topTenMovies:SproutFlix.TopMovies.create({}),
+
+        currentLocation:SproutFlix.LocationMap.create({})
 
       }),
 
