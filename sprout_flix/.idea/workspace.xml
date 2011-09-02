@@ -72,10 +72,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="core_api.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="core_api.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/sprout_flix/core_api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="63" selection-start="10524" selection-end="10524" vertical-scroll-proportion="0.0">
+            <state line="251" column="39" selection-start="11321" selection-end="11321" vertical-scroll-proportion="0.76589596">
               <folding />
             </state>
           </provider>
@@ -111,29 +111,29 @@
       <file leaf-file-name="location_map.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sprout_flix/views/Maps/location_map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="47" selection-start="383" selection-end="390" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sprout_flix/resources/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.31213874">
+            <state line="8" column="5" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1314950500000" expanded="true" signature="843:845" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1021:1023" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1206:1208" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1383:1385" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1563:1565" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1743:1745" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="1926:1928" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="2105:2107" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="2291:2293" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="2474:2476" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="2653:2655" placeholder="{...}" />
-                <marker date="1314950500000" expanded="true" signature="2839:2841" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="840:842" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1018:1020" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1203:1205" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1380:1382" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1560:1562" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1740:1742" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="1923:1925" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="2102:2104" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="2288:2290" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="2471:2473" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="2650:2652" placeholder="{...}" />
+                <marker date="1314951155000" expanded="true" signature="2836:2838" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -142,7 +142,7 @@
       <file leaf-file-name="just_added_controller.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/sprout_flix/controllers/just_added_controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="999" selection-end="1029" vertical-scroll-proportion="0.0">
+            <state line="48" column="13" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,14 +170,14 @@
         <option value="$PROJECT_DIR$/apps/sprout_flix/data_sources/main_data_source.js" />
         <option value="$PROJECT_DIR$/apps/sprout_flix/States/LoadingDataState.js" />
         <option value="$PROJECT_DIR$/apps/sprout_flix/views/main_page.js" />
-        <option value="$PROJECT_DIR$/apps/sprout_flix/controllers/just_added_controller.js" />
         <option value="$PROJECT_DIR$/apps/sprout_flix/resources/google.js" />
         <option value="$PROJECT_DIR$/apps/lib/index.rhtml" />
         <option value="$PROJECT_DIR$/Buildfile" />
         <option value="$PROJECT_DIR$/apps/sprout_flix/lib/index.rhtml" />
-        <option value="$PROJECT_DIR$/apps/sprout_flix/views/Maps/location_map.js" />
-        <option value="$PROJECT_DIR$/apps/sprout_flix/core_api.js" />
         <option value="$PROJECT_DIR$/apps/sprout_flix/resources/style.css" />
+        <option value="$PROJECT_DIR$/apps/sprout_flix/views/Maps/location_map.js" />
+        <option value="$PROJECT_DIR$/apps/sprout_flix/controllers/just_added_controller.js" />
+        <option value="$PROJECT_DIR$/apps/sprout_flix/core_api.js" />
       </list>
     </option>
   </component>
@@ -331,6 +331,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprout_flix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprout_flix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sprout_flix" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -599,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/controllers/just_added_controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="999" selection-end="1029" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/sprout_flix/Buildfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="19" selection-start="661" selection-end="672" vertical-scroll-proportion="0.30638298">
@@ -669,37 +688,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/core_api.js">
+    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/resources/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="63" selection-start="10524" selection-end="10524" vertical-scroll-proportion="0.0">
+        <state line="8" column="5" selection-start="240" selection-end="240" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1314951155000" expanded="true" signature="840:842" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1018:1020" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1203:1205" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1380:1382" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1560:1562" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1740:1742" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="1923:1925" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="2102:2104" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="2288:2290" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="2471:2473" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="2650:2652" placeholder="{...}" />
+            <marker date="1314951155000" expanded="true" signature="2836:2838" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/controllers/just_added_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="13" selection-start="1097" selection-end="1097" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/sprout_flix/views/Maps/location_map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="47" selection-start="383" selection-end="390" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/resources/style.css">
+    <entry file="file://$PROJECT_DIR$/apps/sprout_flix/core_api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="319" selection-end="319" vertical-scroll-proportion="0.31213874">
-          <folding>
-            <marker date="1314950500000" expanded="true" signature="843:845" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1021:1023" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1206:1208" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1383:1385" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1563:1565" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1743:1745" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="1926:1928" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="2105:2107" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="2291:2293" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="2474:2476" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="2653:2655" placeholder="{...}" />
-            <marker date="1314950500000" expanded="true" signature="2839:2841" placeholder="{...}" />
-          </folding>
+        <state line="251" column="39" selection-start="11321" selection-end="11321" vertical-scroll-proportion="0.76589596">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -46,8 +46,7 @@ SproutFlix.justAddedSelectionController = SC.ObjectController.create({
 SproutFlix.justAddedController = SC.ArrayController.create({
 
   isShowingButtons:NO,
-  fadeView:'',
-  mapView:''
+  fadeView:''
 
 
 
