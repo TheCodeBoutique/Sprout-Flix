@@ -211,34 +211,11 @@ SC.mixin(SproutFlix, {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    /**
-     * code used to add a description to google maps api
-     */
-//    var contentString = '<div id="content">'+
-//    '<div id="siteNotice">'+
-//    '</div>'+
-//    '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-//    '<div id="bodyContent">'+
-//    '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-//    'sandstone rock formation in the southern part of the '+
-//    'Northern Territory, central Australia. It lies 335 km (208 mi) '+
-//    'south west of the nearest large town, Alice Springs; 450 km '+
-//    '(280 mi) by road. Kata Tjuta and Uluru are the two major '+
-//    'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-//    'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-//    'Aboriginal people of the area. It has many springs, waterholes, '+
-//    'rock caves and ancient paintings. Uluru is listed as a World '+
-//    'Heritage Site.</p>'+
-//    '<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-//    'http://en.wikipedia.org/w/index.php?title=Uluru</a> (last visited June 22, 2009).</p>'+
-//    '</div>'+
-//    '</div>';
-//
-//var infowindow = new google.maps.InfoWindow({
-//    content: contentString
-//});
-
     var map = new google.maps.Map(document.getElementById("map"), myOptions);
+    SproutFlix.googleMapsController.set('map', map);
+    debugger;
+    var infoView;
+
     //chagne the marker for google maps
     var image = sc_static('/resources/images/video.png');
     var marker = new google.maps.Marker({
@@ -247,11 +224,46 @@ SC.mixin(SproutFlix, {
       title:"Uluru (Ayers Rock)"
       //icon: image
     });
+    var request = {
+      location: latlng,
+      radius: 10000,
+      //name:['movie']
+      types: ['movie_theater']
+    };
+    infowindow = new google.maps.InfoWindow();
+
+    //var service = new google.maps.places.PlacesService(map);
+    var service = new google.maps.places.PlacesService(map);
+    service.search(request, this.callback);
+
     marker.setMap(map);
 
     //add the infor pane to the marker
 //    infowindow.open(map,marker);
 
 
+  },
+  callback:function(results, status) {
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        SproutFlix.createMarker(results[i]);
+      }
+    }
+  },
+
+  createMarker:function(place) {
+
+    var map = SproutFlix.googleMapsController.get('map');
+    debugger;
+    var placeLoc = place.geometry.location;
+    var marker = new google.maps.Marker({
+      map: map,
+      position: place.geometry.location
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent(place.name);
+      infowindow.open(map, this);
+    });
   }
 });

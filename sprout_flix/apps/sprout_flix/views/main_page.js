@@ -23,12 +23,23 @@ SproutFlix.mainPage = SC.Page.design({
     topBar:SC.ToolbarView.design({
       layout:{top:0,height:60},
       anchorLocation:SC.ANCHOR_TOP,
-      childViews:'movieQue badgeView badgeNumber switchButton'.w(),
+      childViews:'movieQue badgeView badgeNumber switchButton movieTheaters'.w(),
 
       badgeNumber:SC.LabelView.design({
         layout:{right:41,top:3,height:25,width:25},
         fontWeight: SC.BOLD_WEIGHT,
         valueBinding:'SproutFlix.TrailerContainerController.totalTrailers'
+
+      }),
+      movieTheaters:SC.ButtonView.design({
+        layout:{right:260,centerY:0,height:45,width:80},
+        themeName: 'square',
+        controlSize: SC.JUMBO_CONTROL_SIZE,
+        icon:sc_static('resources/images/theaterBG.png'),
+        action:'click',
+//        click:function() {
+//          SproutFlix.statechart.sendEvent('doShowTrailerList', this);
+//        }
 
       }),
 
